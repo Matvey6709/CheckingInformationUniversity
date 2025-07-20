@@ -13,11 +13,11 @@ class Direction:
         for user in self.Users:
             if int(user.priority) == 1 and user.is_document:
                 i += 1
-            if int(user.id) == id:
+            if user.id != '' and int(user.id) == id:
                 return i
         return -1
     def getUser(self, id):
         for user in self.Users:
-            if int(user.id) == id:
+            if user.id != '' and int(user.id) == id:
                 return user
         return -1

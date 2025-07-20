@@ -104,6 +104,7 @@ async def edit_POST_TEXT(message: Message) -> None:
 
         if len(directions) > 0:
             await msg_time.delete()
+            print(message.from_user.id)
             await message.answer(getFunction(int(message.text), directions))
         else:
             await msg_time.delete()
